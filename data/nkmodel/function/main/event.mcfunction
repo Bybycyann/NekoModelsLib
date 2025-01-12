@@ -1,19 +1,18 @@
 #事件触发
     #lc
     $execute as @s at @s if entity @s[nbt={data:{attr:1}}] run \
-        function nkmodel:data/event/$(left_click)
-    #rc
+        function nkmodel:data/event/$(left_click) with entity @s data.param
     $execute as @s at @s if entity @s[nbt={data:{attr:3}}] run \
-        function nkmodel:data/event/$(right_click)
+        function nkmodel:data/event/$(right_click) with entity @s data.param
     #ldc
     $execute as @s at @s if entity @s[nbt={data:{attr:2}}] run \
-        function nkmodel:data/event/$(left_dblclick)
+        function nkmodel:data/event/$(left_dblclick) with entity @s data.param
     #rdc
     $execute as @s at @s if entity @s[nbt={data:{attr:4}}] run \
-        function nkmodel:data/event/$(right_dblclick)
+        function nkmodel:data/event/$(right_dblclick) with entity @s data.param
 #重置
-    data remove entity @n[type=minecraft:interaction,tag=nmoe] attack
-    data remove entity @n[type=minecraft:interaction,tag=nmoe] interaction
+    data remove entity @n[type=minecraft:interaction,tag=nmo,tag=nktemp] attack
+    data remove entity @n[type=minecraft:interaction,tag=nmo,tag=nktemp] interaction
     data remove entity @s data.attr
-    data modify entity @n[type=minecraft:interaction,tag=nmoe] Tags set value ["nmo"]
-    data modify entity @s Tags set value ["nmoe"]
+    tag @n[type=minecraft:interaction,tag=nmo,tag=nktemp] remove nktemp
+    tag @s remove nktemp

@@ -1,5 +1,4 @@
 #主执行函数
-
 #>tick
 #   execute as @n[type=minecraft:marker,tag=nmo] at @s run \
         function nkmodel:main/0 with entity @s data
@@ -18,13 +17,16 @@
     		storage nmo:template $(template).item
     	#   $data modify entity @n[type=minecraft:item_display] transformation set from \
     		storage nmo:template $(template).size
+		#	$data modify entity @s data.event set from storage nmo:template $(template).event
 
 	#填充自定义模型数据
 	data modify entity @n[type=item_display,tag=nmo] item merge from entity @s data.item
 
 	#放置事件
-	execute if data entity @s data.event_0 run \
-		function nkmodel:main/event_0 with entity @s data.event_0
+	execute if data entity @s data.event.place run \
+		function nkmodel:main/place with entity @s data.event
+		#>place
+		#	$function nkmodel:data/event/$(place)
 
 	#模型交互事件由tick.mcfunction下的部分指令组执行
 

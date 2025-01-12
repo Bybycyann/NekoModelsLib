@@ -1,0 +1,1 @@
+$function nkmodel:data/event/$(place) with entity @s data.event.param
