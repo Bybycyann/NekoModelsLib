@@ -1,0 +1,19 @@
+data modify storage nmo:index cask set value {\
+    template:"break",\
+    item:{\
+        id:"minecraft:barrier",\
+        components:{\
+            "minecraft:custom_model_data":7810001,\
+            "minecraft:item_data":{\
+                translate:"item.nkfurniture.cask"\
+            }\
+        }\
+    },\
+    event:{\
+        left_click:"break",\
+        right_click:"test3",\
+        left_dblclick:"test2",\
+        right_dblclick:"test4"\
+    },\
+    event_0:{id:null}\
+}
