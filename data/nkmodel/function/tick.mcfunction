@@ -6,13 +6,11 @@
     execute as @e[type=minecraft:interaction,tag=nmo] at @s \
         if data entity @s attack run \
         data modify entity @n[type=minecraft:marker,tag=nmoe] data merge value {attr:1}
-
     #right_interaction
     execute as @e[type=minecraft:interaction,tag=nmo] at @s \
         if data entity @s interaction run \
         data modify entity @n[type=minecraft:marker,tag=nmoe] data merge value {attr:3}
-
-    #run
+    #next
     execute as @e[type=minecraft:interaction,tag=nmo] at @s \
         if data entity @n[type=minecraft:marker,tag=nmoe] data.attr run \
         function nkmodel:main/dblclick1
