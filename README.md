@@ -110,54 +110,54 @@ data modify storage nmo:index cask set value { <模板数据> }
 
 模型数据下提供了 6 个可供编辑的字段, 分别是 `dbl`, `left_click`, `right_click`, `left_dblclick`, `right_dblclick`, `param`. 下面分别介绍这 6 个字段的作用:
 
-- <img src="https://zh.minecraft.wiki/images/Data_node_bool.svg?77754" alt='布尔型' title='布尔型' width='20' height='20'>**dbl**: (默认为 `false`) 若指定为true, 则数据包会对模型的双击事件进行判定
+- <img src="https://zh.minecraft.wiki/images/Data_node_bool.svg?77754" alt='布尔型' title='布尔型' width='16' height='16'>**dbl**: (默认为 `false`) 若指定为true, 则数据包会对模型的双击事件进行判定
 
-- <img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='20' height='20'>**place**: 触发的事件或事件组. 若为单一事件则写入 `<事件id>`, 若为事件组则写入 `group/<事件组id>`
+- <img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='16' height='16'>**place**: 触发的事件或事件组. 若为单一事件则写入 `<事件id>`, 若为事件组则写入 `group/<事件组id>`
 
-- <img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='20' height='20'>**left_click**: 触发事件或事件组. 若为单一事件则写入 `<事件id>`, 若为事件组则写入 `group/<事件组id>`
+- <img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='16' height='16'>**left_click**: 触发事件或事件组. 若为单一事件则写入 `<事件id>`, 若为事件组则写入 `group/<事件组id>`
 
-- <img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='20' height='20'>**right_click**: 触发事件或事件组. 若为单一事件则写入 `<事件id>`, 若为事件组则写入 `group/<事件组id>`
+- <img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='16' height='16'>**right_click**: 触发事件或事件组. 若为单一事件则写入 `<事件id>`, 若为事件组则写入 `group/<事件组id>`
 
-- <img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='20' height='20'>**left_dblclick**: 触发事件或事件组. 若为单一事件则写入 `<事件id>`, 若为事件组则写入 `group/<事件组id>`
+- <img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='16' height='16'>**left_dblclick**: 触发事件或事件组. 若为单一事件则写入 `<事件id>`, 若为事件组则写入 `group/<事件组id>`
 
-- <img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='20' height='20'>**right_dblclick**: 触发事件或事件组. 若为单一事件则写入 `<事件id>`, 若为事件组则写入 `group/<事件组id>`
+- <img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='16' height='16'>**right_dblclick**: 触发事件或事件组. 若为单一事件则写入 `<事件id>`, 若为事件组则写入 `group/<事件组id>`
 
-- <img src="https://zh.minecraft.wiki/images/Data_node_structure.svg?3a597" alt='NBT复合标签/JSON对象' title='NBT复合标签/JSON对象' width='20' height='20'>**param**: 存储所有类型事件的传入参数
+- <img src="https://zh.minecraft.wiki/images/Data_node_structure.svg?3a597" alt='NBT复合标签/JSON对象' title='NBT复合标签/JSON对象' width='16' height='16'>**param**: 存储所有类型事件的传入参数
 
   <details>
       <summary>param子内容</summary>
-      <img src="https://zh.minecraft.wiki/images/Data_node_structure.svg?3a597" alt='NBT复合标签/JSON对象' title='NBT复合标签/JSON对象' width='20' height='20'>
+      <img src="https://zh.minecraft.wiki/images/Data_node_structure.svg?3a597" alt='NBT复合标签/JSON对象' title='NBT复合标签/JSON对象' width='16' height='16'>
       place: 放置事件参数<br>
-      --<img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='20' height='20'>
+      --<img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='16' height='16'>
       attr: 值与父级键名相同(place), 调用事件组(group)时必填, 单一事件可省略<br>
-      --<img src="https://zh.minecraft.wiki/images/Data_node_any.svg?d406c" alt='任意类型' title='任意类型' width='20' height='20'>
+      --<img src="https://zh.minecraft.wiki/images/Data_node_any.svg?d406c" alt='任意类型' title='任意类型' width='16' height='16'>
       (xxx): 传入参数, 键名根据调用事件需求填写, 缺少参数会导致事件不能正常执行或事件组执行不完全<br>
-      <img src="https://zh.minecraft.wiki/images/Data_node_structure.svg?3a597" alt='NBT复合标签/JSON对象' title='NBT复合标签/JSON对象' width='20' height='20'>
+      <img src="https://zh.minecraft.wiki/images/Data_node_structure.svg?3a597" alt='NBT复合标签/JSON对象' title='NBT复合标签/JSON对象' width='16' height='16'>
       lc: 左键交互事件参数<br>
-      --<img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='20' height='20'>
+      --<img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='16' height='16'>
       attr: 值与父级键名相同(lc), 调用事件组(group)时必填, 单一事件可省略<br>
-      --<img src="https://zh.minecraft.wiki/images/Data_node_any.svg?d406c" alt='任意类型' title='任意类型' width='20' height='20'>
+      --<img src="https://zh.minecraft.wiki/images/Data_node_any.svg?d406c" alt='任意类型' title='任意类型' width='16' height='16'>
       (xxx): 传入参数, 键名根据调用事件需求填写, 缺少参数会导致事件不能正常执行或事件组执行不完全<br>
-      <img src="https://zh.minecraft.wiki/images/Data_node_structure.svg?3a597" alt='NBT复合标签/JSON对象' title='NBT复合标签/JSON对象' width='20' height='20'>
+      <img src="https://zh.minecraft.wiki/images/Data_node_structure.svg?3a597" alt='NBT复合标签/JSON对象' title='NBT复合标签/JSON对象' width='16' height='16'>
       rc: 右键交互事件参数<br>
-      --<img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='20' height='20'>
+      --<img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='16' height='16'>
       attr: 值与父级键名相同(rc), 调用事件组(group)时必填, 单一事件可省略<br>
-      --<img src="https://zh.minecraft.wiki/images/Data_node_any.svg?d406c" alt='任意类型' title='任意类型' width='20' height='20'>
+      --<img src="https://zh.minecraft.wiki/images/Data_node_any.svg?d406c" alt='任意类型' title='任意类型' width='16' height='16'>
       (xxx): 传入参数, 键名根据调用事件需求填写, 缺少参数会导致事件不能正常执行或事件组执行不完全<br>
-      <img src="https://zh.minecraft.wiki/images/Data_node_structure.svg?3a597" alt='NBT复合标签/JSON对象' title='NBT复合标签/JSON对象' width='20' height='20'>
+      <img src="https://zh.minecraft.wiki/images/Data_node_structure.svg?3a597" alt='NBT复合标签/JSON对象' title='NBT复合标签/JSON对象' width='16' height='16'>
       ldc: 左键交互事件参数(
-      <img src="https://zh.minecraft.wiki/images/Data_node_bool.svg?77754" alt='布尔型' title='布尔型' width='20' height='20'>
+      <img src="https://zh.minecraft.wiki/images/Data_node_bool.svg?77754" alt='布尔型' title='布尔型' width='16' height='16'>
       dbl字段为 false 时可不填)<br>
-      --<img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='20' height='20'>
+      --<img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='16' height='16'>
       attr: 值与父级键名相同(ldc), 调用事件组(group)时必填, 单一事件可省略<br>
-      --<img src="https://zh.minecraft.wiki/images/Data_node_any.svg?d406c" alt='任意类型' title='任意类型' width='20' height='20'>
+      --<img src="https://zh.minecraft.wiki/images/Data_node_any.svg?d406c" alt='任意类型' title='任意类型' width='16' height='16'>
       (xxx): 传入参数, 键名根据调用事件需求填写, 缺少参数会导致事件不能正常执行或事件组执行不完全<br>
       rdc: 左键交互事件参数(
-      <img src="https://zh.minecraft.wiki/images/Data_node_bool.svg?77754" alt='布尔型' title='布尔型' width='20' height='20'>
+      <img src="https://zh.minecraft.wiki/images/Data_node_bool.svg?77754" alt='布尔型' title='布尔型' width='16' height='16'>
       dbl字段为 false 时可不填)<br>
-      --<img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='20' height='20'>
+      --<img src="https://zh.minecraft.wiki/images/Data_node_string.svg?5cfa3" alt='字符串' title='字符串' width='16' height='16'>
       attr: 值与父级键名相同(rdc), 调用事件组(group)时必填, 单一事件可省略<br>
-      --<img src="https://zh.minecraft.wiki/images/Data_node_any.svg?d406c" alt='任意类型' title='任意类型' width='20' height='20'>
+      --<img src="https://zh.minecraft.wiki/images/Data_node_any.svg?d406c" alt='任意类型' title='任意类型' width='16' height='16'>
       (xxx): 传入参数, 键名根据调用事件需求填写, 缺少参数会导致事件不能正常执行或事件组执行不完全<br>
   </details>
 
@@ -171,7 +171,7 @@ data modify storage nmo:index cask set value { <模板数据> }
 
 ### 调试
 
-```
+```mcfunction
 /function nkmodel:debug
 ```
 
