@@ -1,1 +1,0 @@
-$give @s minecraft:cow_spawn_egg[entity_data={id:"minecraft:marker",Tags:["nmo"],data:{index:$(id)}}]
