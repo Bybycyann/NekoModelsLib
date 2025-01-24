@@ -1,0 +1,28 @@
+data modify storage nmo:index wooden_chair set value {\
+    id:wooden_chair,\
+    template:"default",\
+    item:{\
+        id:"minecraft:cow_spawn_egg",\
+        components:{\
+            "minecraft:custom_model_data":7810002,\
+            "minecraft:item_name":'{\
+                "translate":"item.nkmodel.wooden_chair"\
+            }'\
+        }\
+    },\
+    event:{\
+        right_click:"group/ride-rotate",\
+        param:{\
+            place:{sound:"minecraft:block.wood.place"},\
+            lc:{\
+                attr:"lc",\
+                particle:"minecraft:spruce_planks",\
+                sound:"minecraft:block.wood.break"\
+                },\
+            rc:{\
+                attr:"rc",\
+                ride_height:0.5\
+            }\
+        }\
+    }\
+}

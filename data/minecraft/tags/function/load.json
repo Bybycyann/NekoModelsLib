@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "nkmodel:load",
+        "#nkmodel:model_reg",
+        "#nkmodel:template_reg"
+    ]
+}

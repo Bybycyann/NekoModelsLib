@@ -1,0 +1,7 @@
+{
+    "replace":false,
+    "values":[
+        "nkmodel:data/model/cask",
+        "nkmodel:data/model/wooden_chair"
+    ]
+}

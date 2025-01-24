@@ -1,0 +1,5 @@
+execute as @e[type=minecraft:marker,tag=nmo] at @s run function nkmodel:main/0 with entity @s data
+execute as @e[type=minecraft:interaction,tag=nmo,tag=!nktemp] at @s if entity @a[distance=..5.5] if data entity @s attack run data modify entity @n[type=minecraft:marker,tag=nmoe,tag=!nktemp] data merge value {attr:1}
+execute as @e[type=minecraft:interaction,tag=nmo,tag=!nktemp] at @s if entity @a[distance=..5.5] if data entity @s interaction run data modify entity @n[type=minecraft:marker,tag=nmoe,tag=!nktemp] data merge value {attr:3}
+execute as @e[type=minecraft:interaction,tag=nmo,tag=!nktemp] at @s if entity @a[distance=..5.5] if data entity @n[type=minecraft:marker,tag=nmoe,tag=!nktemp] data.attr run function nkmodel:main/dblclick1
+execute as @e[tag=nmoride] at @s unless entity @a[distance=..0.7] run kill @s
