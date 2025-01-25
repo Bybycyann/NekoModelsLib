@@ -15,6 +15,9 @@
     execute as @e[type=minecraft:interaction,tag=nmo,tag=!nktemp] at @s \
         if data entity @n[type=minecraft:marker,tag=nmoe,tag=!nktemp] data.attr run \
         function nkmodel:main/dblclick1
+#事件补充内容
+    #清除骑乘媒介(..0.7是试出来的,本来0.6也可以的,但是换了个世界出BUG就给调成0.7了)
+    execute as @e[tag=nmoride] at @s unless entity @a[distance=..0.7] run kill @s
 #>nkmodel/main/0	
 #补全Marker实体数据标签
 	$data modify entity @s data set from storage nmo:index $(index)
@@ -45,6 +48,8 @@
         tag @n[type=minecraft:marker,tag=nmoe] add nktemp
         tag @s add nktemp
         #预处理
+        data modify entity @n[type=minecraft:marker,tag=nmoe,tag=nktemp] data.attack set from entity @s attack
+        data modify entity @n[type=minecraft:marker,tag=nmoe,tag=nktemp] data.interaction set from entity @s interaction
         data remove entity @s attack
         data remove entity @s interaction
         schedule function nkmodel:main/dblclick2 3 append
@@ -56,6 +61,11 @@
             #rdc判定
             execute as @e[type=minecraft:interaction,tag=nmo,tag=nktemp,tag=dbl] at @s if data entity @s interaction run \
                     data modify entity @n[type=minecraft:marker,tag=nmoe,tag=nktemp] data.attr set value 4
+            #补全交互信息
+            execute as @e[type=minecraft:marker,tag=nmoe,tag=nktemp] at @s run \
+                data modify entity @n[type=minecraft:interaction,tag=nmo] attack set from entity @s data.attack
+            execute as @e[type=minecraft:marker,tag=nmoe,tag=nktemp] at @s run \
+                data modify entity @n[type=minecraft:interaction,tag=nmo] interaction set from entity @s data.interaction
             #event执行
             execute as @e[type=minecraft:marker,tag=nmoe,tag=nktemp] run \
                 function nkmodel:main/event with entity @s data
@@ -79,6 +89,7 @@
             tag @n[type=minecraft:interaction,tag=nmo,tag=nktemp] remove nktemp
             tag @s remove nktemp
 #清空Marker的template和item数据
+	data modify entity @s data.event.id set string entity @s data.id
 	data modify entity @s data set from entity @s data.event
 	data modify entity @s Tags set value ["nmoe"]
 #双击启用判定
