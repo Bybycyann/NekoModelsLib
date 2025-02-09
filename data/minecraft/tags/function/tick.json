@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "nkmodel:tick",
+        "nkworkblock:tick"
+    ]
+}

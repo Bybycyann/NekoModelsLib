@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "work_block_open": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [{
+                    "items": "minecraft:paper",
+                    "predicates": {
+                        "custom_data": {"tag":"nkgui"}
+                    }
+                }]
+            }
+        }
+    },
+    "rewards": {
+        "function": "nkworkblock:button/main"
+    }   
+}

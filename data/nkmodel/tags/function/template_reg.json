@@ -1,0 +1,7 @@
+{
+    "replace":false,
+    "values":[
+        "nkmodel:data/template/default",
+        "nkmodel:data/template/workblock"
+    ]
+}

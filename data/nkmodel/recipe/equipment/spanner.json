@@ -1,0 +1,31 @@
+{
+    "type":"crafting_shaped",
+    "group":"nkmodel",
+    "category":"equipment",
+    "show_notification":true,
+    "key":{
+        "A":"minecraft:iron_ingot",
+        "B":"minecraft:iron_nugget"
+    },
+    "pattern":[
+        " B ",
+        "BAB",
+        " B "
+    ],
+    "result":{
+        "id":"minecraft:iron_pickaxe",
+        "components":{
+            "minecraft:max_damage":1200,
+            "minecraft:custom_model_data":7810001,
+            "minecraft:item_name":"{\"translate\":\"item.nkmodel.spanner\"}",
+            "minecraft:repair_cost":0,
+            "minecraft:tool":{
+                "rules":[{
+                    "blocks":"#nkmodel:mineable/spanner",
+                    "correct_for_drops":true,
+                    "speed":6
+                }]
+            }
+        }
+    }
+}

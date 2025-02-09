@@ -1,0 +1,16 @@
+{
+    "criteria":{
+        "work_block_open":{
+            "trigger":"minecraft:any_block_use",
+            "conditions":{
+                "location":[{
+                    "condition":"minecraft:reference",
+                    "name":"nkworkblock:open"
+                }]
+            }
+        }
+    },
+    "rewards":{
+        "function":"nkworkblock:open/main"
+    }   
+}
