@@ -10,7 +10,7 @@
   本数据包采用刷怪蛋生成.
   `give @s cow_spawn_egg[entity_data={<model_data>}]`
   
-- 借鉴 [CR-019](https://space.bilibili.com/85292644?spm_id_from=333.337.0.0) 大佬开发的数据包 [DecoCreaterKit](https://www.mcmod.cn/class/14646.html) , 我们希望能够通过 [命令存储](https://zh.minecraft.wiki/w/%E5%91%BD%E4%BB%A4%E5%AD%98%E5%82%A8%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F?variant=zh-cn) 来实现对自定义模型数据的管理以及调用, 在这里引入命令存储作为 **模型索引** `nmo:index` , 初步考虑其内数据的结构体为:
+- 借鉴 [CR-019](https://space.bilibili.com/85292644?spm_id_from=333.337.0.0) 的数据包 [DecoCreaterKit](https://www.mcmod.cn/class/14646.html) , 我们希望能够通过 [命令存储](https://zh.minecraft.wiki/w/%E5%91%BD%E4%BB%A4%E5%AD%98%E5%82%A8%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F?variant=zh-cn) 来实现对自定义模型数据的管理以及调用, 在这里引入命令存储作为 **模型索引** `nmo:index` , 初步考虑其内数据的结构体为:
 
   ```snbt
   ##模型数据##
