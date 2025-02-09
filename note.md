@@ -290,8 +290,6 @@
 }
 ```
 
-
-
 #### 进度
 
 - 容器的绑定与解绑, 确保玩家的点击事件仅对目标容器进行更新;
@@ -335,10 +333,18 @@
 > 调用例:
 >
 > ```mcfunction
+> #basic函数 --处理最基本的数据剔除
 > data modify storage nktool:array input.source set ......
 > data modify storage nktool:array input.remove set ......
 > function nktool:regroup/0
-> data modify <存储目标> set from storage nktool:array return
+> data modify <存储目标> set from storage nktool:array return			 #return数据覆写
+> data remove storage nktool:array return
+> 
+> #container函数 --对容器中符合tag条件的物品数据进行筛除
+> data modify storage nktool:array input.source set ......					  #容器的Items列表
+> data modify storage nktool:array input.remove set ......					#该项应输入目标tag
+> function nktool:regroup/0
+> ......																										#处理输出列表
 > data remove storage nktool:array return
 > ```
 
