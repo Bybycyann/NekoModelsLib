@@ -3,4 +3,4 @@ execute as @a if entity @n[tag=nkworkblock,distance=..15] run stopsound @s block
 #容器重置
 data remove entity @s data.player
 data modify entity @s data.page set value "home"
-$data modify block ~ ~ ~ {} merge from storage nmo:container $(id).home
+$data modify block ~ ~ ~ Items append from storage nmo:container $(id).home.Items
