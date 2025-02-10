@@ -302,17 +302,19 @@
 
 #### 待完善
 
+- 物品回退刷物品bug
+
 - 由于set数据填充问题导致爆炸产生的掉落物 count 被设置为 1
 
 - ~~再加一条若容器状态为闭合则清空player列表~~
 
 - 容器从home页切换到子页时回退玩家物品or缓存界面等待再次调用
 - ~~容器关闭时回退到 home 页~~
-- 如何阻止玩家把容器里作为“背景”的物品取出来。如何阻止玩家把容器破坏。
+- ~~如何阻止玩家把容器里作为“背景”的物品取出来。如何阻止玩家把容器破坏。~~
 - 如何阻止玩家用漏斗偷东西。
 - 如何阻止玩家通过光标浮在物品上按Q的方式把物品丢出去。
 - 如何阻止玩家通过光标浮在物品上按F的方式把物品换到自己副手。
-- 如何阻止玩家将不相干的物品放入容器中致使物品丢失。
+- ~~如何阻止玩家将不相干的物品放入容器中致使物品丢失。~~
 
 ## 新坑: 功能性函数库(nkToolKit)
 
@@ -328,36 +330,55 @@
 
 若成功在玩家视线射线5.1格范围内检索到方块则在目标位置生成 `tag=nkraycast` 的 Marker 实体, 可结合目标选择器选择该实体来实现间接选取目标方块.
 
-### 列表重组-Regroup
+### 列表重组-List regroup
 
 > 调用例:
 >
 > ```mcfunction
 > #basic函数 --处理最基本的数据剔除
 > data modify storage nktool:array input.source set ......
-> data modify storage nktool:array input.remove set ......
+> data modify storage nktool:array input.condition set ......
+> scoreboard players set #regroup nkTemp <分支值>						  #0为剔除元素, 1为保留元素
 > function nktool:regroup/0
-> data modify <存储目标> set from storage nktool:array return			 #return数据覆写
-> data remove storage nktool:array return
+> data modify <存储目标> set from storage nktool:array output			#output数据覆写
+> data remove storage nktool:array output
 > 
 > #container函数 --对容器中符合tag条件的物品数据进行筛除
 > data modify storage nktool:array input.source set ......					  #容器的Items列表
-> data modify storage nktool:array input.remove set ......					#该项应输入目标tag
+> data modify storage nktool:array input.condition set ......					#该项应输入目标tag
+> scoreboard players set #regroup nkTemp <分支值>						 #0为剔除元素, 1为保留元素
 > function nktool:regroup/0
 > ......																										#处理输出列表
-> data remove storage nktool:array return
+> data remove storage nktool:array output
 > ```
 
-创建storage `nktool:array` 用来存储输出列表 `return`, 源列表 `source`, 剔除值 `remove` 和逻辑值 `temp`,其数据结构如下:
+创建storage `nktool:array` 用来存储输出列表 `output`, 源列表 `source`, 目标值 `condition` 和逻辑值 `temp`,其数据结构如下:
 
 ```SNBT
 {
 	input: {
 		source: <源列表>,
-		remove: <剔除值>,
+		condition: <目标值>,
 		temp: <逻辑值>
 	},
-	return: <返回列表>
+	output: <返回列表>
+}
+```
+
+### 列表比对-List comp
+
+> 
+
+创建Storage `nktool:array` 用来存储输出列表 `output`, 源列表 `source`, 对照列表 `after` 和逻辑值 `temp`,其数据结构如下:
+
+```SNBT
+{
+	input: {
+		source: <源列表>,
+		after:<对照列表>,
+		temp: <逻辑值>
+	},
+	output: <返回列表>
 }
 ```
 
