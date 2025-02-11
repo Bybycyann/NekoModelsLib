@@ -8,5 +8,11 @@ execute as @e[tag=nkworkblock] at @s align xyz if data entity @s data.player if 
 execute as @a if items entity @s player.cursor minecraft:paper[custom_data~{tag:nkgui}] at @s run function nkworkblock:button/click
 execute as @a if items entity @s weapon.offhand minecraft:paper[custom_data~{tag:nkgui}] at @s run function nkworkblock:button/f
 
+#home页配方监听
+execute as @e[tag=nkworkblock] at @s align xyz \
+    if predicate nkworkblock:open \
+    if data entity @s {Tags:["nkworkblock"],data:{page:"home"}} run \
+    function nkworkblock:recipes/0 with entity @s data
+
 #清除gui掉落物
 execute as @e[type=item] if data entity @s {Item:{components:{"minecraft:custom_data":{tag:"nkgui"}}}} run kill @s

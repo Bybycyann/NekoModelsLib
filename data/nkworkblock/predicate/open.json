@@ -1,9 +1,11 @@
 {
     "condition":"location_check",
-    "predicate":{
-        "block":{
-            "blocks":"minecraft:barrel",
-            "nbt":"{components:{\"minecraft:custom_data\":{tag:\"nkworkblock\"}}}"
+    "predicate": {
+        "block": {
+            "blocks": "minecraft:barrel",
+            "state": {
+                "open": "true"
+            }
         }
     }
 }

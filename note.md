@@ -290,6 +290,19 @@
 }
 ```
 
+关于配方:
+
+配方文件存储于Storage `nmo:recipes` ,其数据结构如下:
+
+```SNBT
+<索引注册id>: [
+	{recipe:[<配方列表数据>], result:{输出物品数据}
+	......
+]
+```
+
+
+
 #### 进度
 
 - 容器的绑定与解绑, 确保玩家的点击事件仅对目标容器进行更新;
@@ -302,7 +315,9 @@
 
 #### 待完善
 
-- 物品回退刷物品bug
+- 合成物品点击占位符刷物品的bug
+
+- ~~物品回退刷物品bug~~
 
 - 由于set数据填充问题导致爆炸产生的掉落物 count 被设置为 1
 
@@ -313,7 +328,7 @@
 - ~~如何阻止玩家把容器里作为“背景”的物品取出来。如何阻止玩家把容器破坏。~~
 - 如何阻止玩家用漏斗偷东西。
 - 如何阻止玩家通过光标浮在物品上按Q的方式把物品丢出去。
-- 如何阻止玩家通过光标浮在物品上按F的方式把物品换到自己副手。
+- ~~如何阻止玩家通过光标浮在物品上按F的方式把物品换到自己副手。~~
 - ~~如何阻止玩家将不相干的物品放入容器中致使物品丢失。~~
 
 ## 新坑: 功能性函数库(nkToolKit)
@@ -346,6 +361,7 @@
 > #container函数 --对容器中符合tag条件的物品数据进行筛除
 > data modify storage nktool:array input.source set ......					  #容器的Items列表
 > data modify storage nktool:array input.condition set ......					#该项应输入目标tag
+> scoreboard players set #arr nkTemp <分支值>								 #1则调用container函数
 > scoreboard players set #regroup nkTemp <分支值>						 #0为剔除元素, 1为保留元素
 > function nktool:regroup/0
 > ......																										#处理输出列表

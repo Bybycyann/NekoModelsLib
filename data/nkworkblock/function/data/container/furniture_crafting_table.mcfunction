@@ -12,7 +12,7 @@ data modify storage nmo:container furniture_crafting_table set value {\
             {Slot:10b,components:{"minecraft:custom_data":{tag:"nkgui"},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:paper"},\
             {Slot:14b,components:{"minecraft:custom_data":{tag:"nkgui"},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:paper"},\
             {Slot:15b,components:{"minecraft:custom_data":{tag:"nkgui"},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:paper"},\
-            {Slot:16b,components:{"minecraft:custom_data":{tag:"nkgui"},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:paper"},\
+            {Slot:16b,components:{"minecraft:custom_data":{tag:"nkgui",result:null},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:paper"},\
             {Slot:17b,components:{"minecraft:custom_data":{tag:"nkgui"},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:paper"},\
             {Slot:18b,components:{"minecraft:custom_data":{tag:"nkgui"},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:paper"},\
             {Slot:19b,components:{"minecraft:custom_data":{tag:"nkgui"},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:paper"},\

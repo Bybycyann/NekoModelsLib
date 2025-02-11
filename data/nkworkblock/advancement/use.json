@@ -5,12 +5,12 @@
             "conditions":{
                 "location":[{
                     "condition":"minecraft:reference",
-                    "name":"nkworkblock:open"
+                    "name":"nkworkblock:use"
                 }]
             }
         }
     },
     "rewards":{
-        "function":"nkworkblock:open/main"
+        "function":"nkworkblock:use/main"
     }   
 }
