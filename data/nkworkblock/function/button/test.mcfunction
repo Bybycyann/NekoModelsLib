@@ -1,1 +1,0 @@
-item replace entity @a weapon.offhand with minecraft:air

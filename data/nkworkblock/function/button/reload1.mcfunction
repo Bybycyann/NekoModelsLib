@@ -11,4 +11,4 @@ execute as @e[tag=nkworkblock,tag=nktemp] at @s align xyz run \
 tag @s remove nktemp
 tag @e[tag=nkworkblock,tag=nktemp] remove nktemp
 scoreboard players reset #arr nkTemp
-data remove storage nktool:array return
+data remove storage nktool:array output
