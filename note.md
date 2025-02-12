@@ -315,7 +315,9 @@
 
 #### 待完善
 
-- 合成物品点击占位符刷物品的bug
+- recipes的main函数分支做整合
+
+- ~~合成物品点击占位符刷物品的bug~~
 
 - ~~物品回退刷物品bug~~
 
@@ -368,7 +370,7 @@
 > data remove storage nktool:array output
 > ```
 
-创建storage `nktool:array` 用来存储输出列表 `output`, 源列表 `source`, 目标值 `condition` 和逻辑值 `temp`,其数据结构如下:
+创建storage `nktool:array` 用来存储输出列表 `output`, 源列表 `source`, 目标值 `condition` 和逻辑值 `temp`, 其数据结构如下:
 
 ```SNBT
 {
@@ -385,7 +387,7 @@
 
 > 
 
-创建Storage `nktool:array` 用来存储输出列表 `output`, 源列表 `source`, 对照列表 `after` 和逻辑值 `temp`,其数据结构如下:
+创建Storage `nktool:array` 用来存储输出列表 `output`, 源列表 `source`, 对照列表 `after` 和逻辑值 `temp`, 其数据结构如下:
 
 ```SNBT
 {
@@ -397,4 +399,33 @@
 	output: <返回列表>
 }
 ```
+
+### 极值-extreme
+
+> 调用例:
+>
+> ```mcfunction
+> data modify storage nktool:array input.source set ......
+> data modify storage nktool:array input.type set value <max/min>
+> function nktool:extreme/0
+> ......
+> scoreboard players reset #temp nkTemp
+> scoreboard players reset #arr nkTemp
+> scoreboard players reset #extreme nkTemp
+> ```
+>
+> 
+
+创建Storage `nktool:array` 用来存储输源列表 `source` 和运算类型 `type`, 因运算多使用计分板故输出值也采用计分板输出, 结果存储在 `#extreme nkTemp` 中
+
+```SNBT
+{
+	input:{
+		source: <源列表>,
+		type: <max or min>
+	}
+}
+```
+
+
 

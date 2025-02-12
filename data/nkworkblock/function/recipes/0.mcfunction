@@ -9,12 +9,15 @@ data modify storage nktool:array input.condition set value "output"
 scoreboard players set #arr nkTemp 1
 scoreboard players set #output nkTemp 0
 function nktool:regroup/0
-
+#取合成栏材料count最小值于 #extreme nkTemp
+data modify storage nktool:array input.temp set from storage nktool:array output
+function nkworkblock:recipes/count_list
+data modify storage nktool:array input.type set value min
+function nktool:extreme/0
 #count清除
 data modify storage nktool:array input.source set from storage nktool:array output
 data remove storage nktool:array output
 function nkworkblock:recipes/remove_count
-
 #配方匹配
 $data modify storage nktool:array input.source set from storage nmo:recipes $(id)
 data modify storage nktool:array input.condition set from storage nktool:array output
@@ -25,6 +28,8 @@ execute store result score #output nkTemp run data get storage nktool:array outp
 execute unless score #output nkTemp matches 0 if data block ~ ~ ~ Items[{components:{"minecraft:custom_data":{result:null}}}] run function nkworkblock:recipes/main
 execute if score #output nkTemp matches 0 if data block ~ ~ ~ Items[{components:{"minecraft:custom_data":{tag:"output"}}}] run function nkworkblock:recipes/output_reload
 #后处理
-#data remove storage nktool:array output
+data remove storage nktool:array output
+scoreboard players reset #temp nkTemp
 scoreboard players reset #arr nkTemp
 scoreboard players reset #output nkTemp
+scoreboard players reset #extreme nkTemp

@@ -1,3 +1,4 @@
+#删除recipe列表中的count项
 data remove storage nktool:array input.source[0].count
 data modify storage nktool:array output append from storage nktool:array input.source[0]
 data remove storage nktool:array input.source[0]
