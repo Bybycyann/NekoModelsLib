@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "work_block_open": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [{
+                    "predicates": {
+                        "custom_data": {"tag":"output"}
+                    }
+                }]
+            }
+        }
+    },
+    "rewards": {
+        "function": "nkworkblock:output/0"
+    }   
+}
