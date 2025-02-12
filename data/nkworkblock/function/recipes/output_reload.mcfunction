@@ -1,0 +1,3 @@
+data modify block ~ ~ ~ Items[{components:{"minecraft:custom_data":{tag:"output"}}}].id set value "minecraft:paper"
+data modify block ~ ~ ~ Items[{components:{"minecraft:custom_data":{tag:"output"}}}].count set value 1
+data modify block ~ ~ ~ Items[{components:{"minecraft:custom_data":{tag:"output"}}}].components set value {"minecraft:custom_data":{tag:"nkgui",result:null},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"}

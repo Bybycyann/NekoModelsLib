@@ -1,6 +1,14 @@
 data modify storage nmo:recipes furniture_crafting_table set value [\
     {\
-        recipe:[{count:1,Slot:2b,id:"minecraft:paper"},{count:1,Slot:12b,id:"minecraft:paper"}],\
+        recipe:[],\
+        result:{\
+            count:1,\
+            id:"minecraft:paper",\
+            components:{"minecraft:custom_data":{tag:"nkgui",result:null},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"}\
+        }\
+    },\
+    {\
+        recipe:[{Slot:2b,id:"minecraft:paper"},{Slot:12b,id:"minecraft:paper"}],\
         result:{\
             count:1,\
             id:"minecraft:cow_spawn_egg",\
@@ -14,5 +22,12 @@ data modify storage nmo:recipes furniture_crafting_table set value [\
                 "minecraft:item_name":'{"translate":"item.nkfurniture.furniture_crafting_table"}'\
             }\
         }\
-    }\
+    },\
+    {\
+        recipe:[{Slot:2b,id:"minecraft:paper"},{Slot:11b,id:"minecraft:paper"}],\
+        result:{\
+            count:1,\
+            id:"minecraft:cow_spawn_egg",\
+        }\
+    },\
 ]

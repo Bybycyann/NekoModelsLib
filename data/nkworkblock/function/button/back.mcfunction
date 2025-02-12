@@ -14,6 +14,12 @@ scoreboard players set #arr nkTemp 1
 data modify storage nktool:array input.source set from storage nktool:array output
 data modify storage nktool:array input.condition set value "nkopenslot"
 function nktool:regroup/0
+#regroup-container函数分支
+scoreboard players set #arr nkTemp 1
+#三次筛除
+data modify storage nktool:array input.source set from storage nktool:array output
+data modify storage nktool:array input.condition set value "output"
+function nktool:regroup/0
 #输出列表处理
 data modify storage nktool:array output[0].Slot set value 0b
 execute as @e[tag=nkworkblock,tag=nktemp] at @s align xyz run data modify block ~ ~ ~ Items[{Slot:0b}] set from storage nktool:array output[0]

@@ -38,6 +38,7 @@ data modify storage nmo:index cask set value { <模型数据> }
 	#模板数据(作为模型数据的补充, 不使用时在后方填入null.)
 	id:"<模型id>",
 	template:"<模板id>",
+	workblock:<T/F>
 	
 	#自定义展示数据
 	#由于一些原因将transformation单独列出来写.

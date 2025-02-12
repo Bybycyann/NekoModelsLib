@@ -32,7 +32,7 @@
 	execute if data entity @s {data:{event:{dbl:true}}} run tag @n[type=interaction,tag=nmo] add dbl
 	#工作方块判定
 	execute if data entity @s {data:{workblock:true}} run kill @n[type=minecraft:interaction,tag=nmo]
-	execute if data entity @s {data:{workblock:true}} run function nkworkblock:basic/place with entity @s data
+	execute if data entity @s {data:{workblock:true}} run return run function nkworkblock:basic/place with entity @s data
 	#清空Marker的template和item数据
 	data modify entity @s data.event.id set string entity @s data.id
 	data modify entity @s data set from entity @s data.event
