@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "nkworkblock:output/0"
+        "function": "nkworkblock:output/main"
     }   
 }
