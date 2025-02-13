@@ -11,7 +11,7 @@ data modify storage nktool:array input.type set value min
 function nktool:extreme/0
 #读取单位合成数于 #count nkTemp, 物品堆叠上限于 #stack nkTemp (支持自定义堆叠范围1..99)
 data modify block ~ ~ ~ Items[{Slot:18b}].id set from entity @s Inventory[{components:{"minecraft:custom_data":{tag:output}}}].id
-#data modify block ~ ~ ~ Items[{Slot:18b}].components set from entity @s Inventory[{components:{"minecraft:custom_data":{tag:output}}}].components
+data modify block ~ ~ ~ Items[{Slot:18b}].components set from entity @s Inventory[{components:{"minecraft:custom_data":{tag:output}}}].components
 data modify block ~ ~ ~ Items[{Slot:18b}].count set from entity @s Inventory[{components:{"minecraft:custom_data":{tag:output}}}].count
 execute store result score #count nkTemp run data get block ~ ~ ~ Items[{Slot:18b}].count
 item modify block ~ ~ ~ container.18 {function:set_count,count:100}
