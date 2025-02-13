@@ -8,6 +8,25 @@ data modify storage nmo:recipes furniture_crafting_table set value [\
         }\
     },\
     {\
+        recipe:[\
+            {Slot:2b,id:"minecraft:iron_ingot",components:{"minecraft:custom_model_data":7810000,"minecraft:item_name":'"测试锭"'}},\
+            {Slot:11b,id:"minecraft:iron_ingot",components:{"minecraft:custom_model_data":7810000,"minecraft:item_name":'"测试锭"'}},\
+            {Slot:20b,id:"minecraft:stick"}\
+            ],\
+        result:{\
+            count:1,\
+            id:"minecraft:iron_sword",\
+            components:{\
+                custom_model_data:7810000,\
+                item_name:"测试剑",\
+                attribute_modifiers:[\
+                    {id:"minecraft:base_attack_damage",amount:8,operation:"add_value",slot:"mainhand",type:"attack_damage"},\
+                    {id:"base_attack_speed",amount:-2.4,operation:"add_value",slot:"mainhand",type:"attack_speed"}\
+                ]\
+            }\
+        }\
+    },\
+    {\
         recipe:[{Slot:2b,id:"minecraft:paper"},{Slot:12b,id:"minecraft:paper"}],\
         result:{\
             count:1,\

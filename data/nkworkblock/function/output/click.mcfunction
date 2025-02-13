@@ -17,7 +17,6 @@ item replace entity @s player.crafting.0 with minecraft:air
 #容器界面刷新
 execute as @e[tag=nkworkblock,tag=nktemp] at @s align xyz run data modify block ~ ~ ~ Items append from storage nmo:container furniture_crafting_table.home.Items[]
 #后处理
-#tag @s remove nktemp
-#tag @e[tag=nkworkblock,tag=nktemp] remove nktemp
+tag @s remove nktemp
+tag @e[tag=nkworkblock,tag=nktemp] remove nktemp
 scoreboard players reset #temp nkTemp
-scoreboard players reset #click nkTemp
