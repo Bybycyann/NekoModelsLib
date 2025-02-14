@@ -1,0 +1,29 @@
+data modify storage nmo:recipes test_block set value [\
+    {\
+        recipe:[],\
+        result:{\
+            count:1,\
+            id:"minecraft:paper",\
+            components:{"minecraft:custom_data":{tag:"nkgui",result:null},"minecraft:hide_tooltip":{},"minecraft:item_model":"minecraft:air"}\
+        }\
+    },\
+    {\
+        recipe:[\
+            {Slot:11b,id:"minecraft:iron_ingot",components:{"minecraft:custom_model_data":7810000,"minecraft:item_name":'"测试锭"'}},\
+            {Slot:12b,id:"minecraft:iron_ingot",components:{"minecraft:custom_model_data":7810000,"minecraft:item_name":'"测试锭"'}},\
+            {Slot:13b,id:"minecraft:stick"}\
+            ],\
+        result:{\
+            count:1,\
+            id:"minecraft:iron_sword",\
+            components:{\
+                custom_model_data:7810000,\
+                item_name:"测试剑",\
+                attribute_modifiers:[\
+                    {id:"minecraft:base_attack_damage",amount:8,operation:"add_value",slot:"mainhand",type:"attack_damage"},\
+                    {id:"base_attack_speed",amount:-2.4,operation:"add_value",slot:"mainhand",type:"attack_speed"}\
+                ]\
+            }\
+        }\
+    },\
+]
