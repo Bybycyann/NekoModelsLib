@@ -18,6 +18,6 @@ scoreboard players reset #click nkTemp
 scoreboard players reset #arr nkTemp
 #scoreboard players reset #remove nkTemp
 data remove storage nktool:array output
-#data remove storage nmo:temp recipe
+data remove storage nmo:temp recipe
 #重置进度触发器
 advancement revoke @s only nkworkblock:output

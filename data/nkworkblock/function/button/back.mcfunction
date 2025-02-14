@@ -1,4 +1,4 @@
-#openslot-tag
+#openslot-item_tag
 execute as @e[tag=nkworkblock,tag=nktemp] if data entity @s {data:{page:"home"}} at @s align xyz run function nkworkblock:openslot/0 with entity @s data
 #input
 execute as @e[tag=nkworkblock,tag=nktemp] at @s align xyz run data modify storage nktool:array input.source set from block ~ ~ ~ Items
