@@ -36,13 +36,3 @@ execute store result score #remove nkTemp run scoreboard players get #extreme nk
 #输出
 execute store result score #give nkTemp run scoreboard players get #remove nkTemp
 function nkworkblock:output/give
-#容器界面刷新
-data modify block ~ ~ ~ Items append from storage nmo:container furniture_crafting_table.home.Items[]
-#后处理
-scoreboard players reset #temp2 nkTemp
-scoreboard players reset #extreme nkTemp
-scoreboard players reset #count nkTemp
-scoreboard players reset #stack nkTemp
-scoreboard players reset #openslot nkTemp
-scoreboard players reset #give nkTemp
-data remove storage nktool:array container

@@ -1,4 +1,4 @@
-#>advancement/button.json
+#>advancement/button.json|button/f.mcf
 #补全容器界面
 data modify storage nmo:temp button.UUID set from entity @s UUID
 data modify storage nmo:temp button merge from entity @s Inventory.[{components:{"minecraft:custom_data":{tag:"nkgui"}}}].components."minecraft:custom_data"
@@ -9,5 +9,5 @@ execute if score #button nkTemp matches 0 run function nkworkblock:button/reload
 scoreboard players reset #button nkTemp
 data remove storage nmo:temp button
 clear @s minecraft:paper[minecraft:custom_data~{tag:"nkgui"}]
-#重置成就触发器
+#重置进度触发器
 advancement revoke @s only nkworkblock:button

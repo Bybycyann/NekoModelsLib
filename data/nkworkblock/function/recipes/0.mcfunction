@@ -14,7 +14,7 @@ execute store result score #output nkTemp run data get storage nktool:array outp
 execute unless score #output nkTemp matches 0 if data block ~ ~ ~ Items[{components:{"minecraft:custom_data":{result:null}}}] run function nkworkblock:recipes/main
 execute if score #output nkTemp matches 0 if data block ~ ~ ~ Items[{components:{"minecraft:custom_data":{tag:"output"}}}] run function nkworkblock:recipes/output_reload
 #后处理
-#data remove storage nktool:array output
+data remove storage nktool:array output
 scoreboard players reset #temp nkTemp
 scoreboard players reset #arr nkTemp
 scoreboard players reset #output nkTemp
