@@ -1,0 +1,21 @@
+{
+    "criteria": {
+        "work_block_open": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": {
+                    "equipment": {
+                        "offhand": {
+                            "predicates": {
+                                "minecraft:custom_data": {"tag":"output"}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "nkworkblock:output/f"
+    }   
+}
