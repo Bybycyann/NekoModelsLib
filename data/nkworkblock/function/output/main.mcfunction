@@ -5,7 +5,7 @@ execute if score #click nkTemp matches 1 at @n[tag=nkworkblock,tag=nktemp] align
 #读取合成槽
 execute as @e[tag=nkworkblock,tag=nktemp] at @s align xyz run function nkworkblock:recipes/read
 #Shift 批量合成处理
-execute unless score #click nkTemp matches 1 as @e[tag=nkworkblock,tag=nktemp] at @s align xyz as @p[tag=nktemp] run function nkworkblock:output/m_shift
+execute unless score #click nkTemp matches 1 unless score #click nkTemp matches 2 as @e[tag=nkworkblock,tag=nktemp] at @s align xyz as @p[tag=nktemp] run function nkworkblock:output/m_shift
 #消耗处理
 data modify storage nktool:array input.source set from storage nktool:array output
 data remove storage nktool:array output
