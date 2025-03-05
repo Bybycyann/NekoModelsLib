@@ -1,7 +1,6 @@
 {
     "replace":false,
     "values":[
-        "nkworkblock:data/container/furniture_crafting_table",
-        "nkworkblock:data/container/test_block"
+        "nkworkblock:data/container/furniture_crafting_table"
     ]
 }
